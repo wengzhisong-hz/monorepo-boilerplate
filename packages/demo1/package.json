@@ -1,0 +1,16 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "demo",
+  "author": {
+    "email": "1322457349@qq.com",
+    "name": "wengzhisong",
+    "url": "https://github.com/wengzhisong-hz"
+  },
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/demo1.ts",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

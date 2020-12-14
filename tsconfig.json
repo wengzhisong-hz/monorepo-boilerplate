@@ -1,0 +1,6 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/demo1/lib" }
+  ]
+}
