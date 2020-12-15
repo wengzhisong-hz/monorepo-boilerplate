@@ -9,8 +9,8 @@ lerna + yarn + TS
 使用 yarn: `yarn install` 安装依赖。
 
 ### 创建子项目
-
-1. 直接拷贝 `demo` package，并在其基础上进行修改
+// todo 整合 lerna create 指令生成package 
+1. 直接拷贝 `demo` package，并在其基础上进行修改  
 2. 在 `tsconfig.json` 中添加TS references
 
 ### 依赖管理
