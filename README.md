@@ -44,8 +44,8 @@ yarn remove -W -D typescript
 1. 设置私库用户：
 
 ```sh
-npm config user.name # 查看用户名
-npm config user.email # 查看用户邮箱
+git config user.name # 查看用户名
+git config user.email # 查看用户邮箱
 npm adduser --registry http://localhost:9000 # 添加用户，输入上面的用户名和邮箱；密码简单一点，比如 123
 ```
 
