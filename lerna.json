@@ -4,7 +4,7 @@
   "version": "independent",
   "command": {
     "publish": {
-      "registry": "https://registry.npmjs.org/"
+      "registry": "http://localhost:9000"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "demo1",
+  "name": "@monorepo/demo",
   "version": "1.0.0",
   "description": "demo",
   "author": {
@@ -9,8 +9,8 @@
   },
   "homepage": "",
   "license": "MIT",
-  "main": "dist/demo1.ts",
+  "main": "dist/demo.js",
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "start": "node dist/demo.js"
   }
 }

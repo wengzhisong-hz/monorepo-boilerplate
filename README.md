@@ -10,16 +10,18 @@ lerna + yarn + TS
 
 ### 创建子项目
 
-1. 直接拷贝`demo` package
-2. 在`tsconfig.json`中添加TS references
+1. 直接拷贝 `demo` package，并在其基础上进行修改
+2. 在 `tsconfig.json` 中添加TS references
 
 ### 依赖管理
 
 ```sh
 # 1. 添加指令
 
-# 将packageA作为packageB的依赖进行安装
-yarn workspace packageB add packageA
+# 将packageB作为packageA的依赖进行安装
+yarn workspace packageA add packageB
+# 将lodash作为packageA的依赖进行安装
+yarn workspace packageA add lodash
 
 # 给所有的package安装lodash依赖 (dependencies peerDependencies 需要安装到每个package中)
 yarn workspaces add lodash
@@ -28,12 +30,38 @@ yarn workspaces add lodash
 yarn add -W -D typescript
 
 # 2. 移除指令
-yarn workspace packageB remove packageA
+yarn workspace packageA remove packageB
+yarn workspace packageA remove lodash
 yarn workspaces remove lodash
 yarn remove -W -D typescript
 ```
 
 ### 包管理
 
-1. 在lerna.json中配置好npm库地址
-2. 使用 `lerna publish` 发布版本
+
+#### 本地开发调试
+
+1. 设置私库用户：
+
+```sh
+npm config user.name # 查看用户名
+npm config user.email # 查看用户邮箱
+npm adduser --registry http://localhost:9000 # 添加用户，输入上面的用户名和邮箱；密码简单一点，比如 123
+```
+
+2. 发包
+
+确定lerna.json 的 registry 值为 `http://localhost:9000`
+
+```sh
+yarn start # 先打包 & 启动本地npm私库
+lerna publish # 发包到本地私库
+```
+
+#### 发布到生产环境
+
+将 `lerna.json` 的 `registry` 值修改为目标npm库，比如npm官方库 `https://registry.npmjs.org/` ，然后执行：
+
+```sh
+lerna publish
+```
