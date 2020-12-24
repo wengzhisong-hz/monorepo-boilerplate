@@ -16,10 +16,13 @@ lerna + yarn + TS
 ### 依赖管理
 
 ```sh
-# 1. 添加指令
+# 1. 添加依赖指令
+# 将packageB引入packageA
+# 在packageB 的package.json中，name字段为 pkgB
+# 在packageA 中：
+# 如果TS报错再运行一次 yarn install 命令
+import pkgB from 'pkgB'
 
-# 将packageB作为packageA的依赖进行安装
-yarn workspace packageA add packageB
 # 将lodash作为packageA的依赖进行安装
 yarn workspace packageA add lodash
 
@@ -51,7 +54,7 @@ npm adduser --registry http://localhost:9000 # 添加用户，输入上面的用
 
 2. 发包
 
-确定lerna.json 的 registry 值为 `http://localhost:9000`
+确定lerna.json 的 registry 值为 `http://localhost:9000`  
 
 ```sh
 yarn start # 先打包 & 启动本地npm私库

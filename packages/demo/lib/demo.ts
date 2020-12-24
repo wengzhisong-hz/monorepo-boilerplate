@@ -1,5 +1,3 @@
-function double (n:number) {
-    return n*2
-}
+import { double } from '@monorepo/another-demo'
 
 export { double }

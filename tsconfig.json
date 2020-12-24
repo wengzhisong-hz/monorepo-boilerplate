@@ -1,6 +1,7 @@
 {
   "files": [],
   "references": [
-    { "path": "./packages/demo/lib"}
+    { "path": "./packages/demo/lib"},
+    { "path": "./packages/another-demo/lib"}
   ]
 }
