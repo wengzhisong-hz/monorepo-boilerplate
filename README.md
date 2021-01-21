@@ -15,24 +15,27 @@ lerna + yarn + TS
 
 ### 依赖管理
 
+1. 添加依赖指令
 ```sh
-# 1. 添加依赖指令
-# 将packageB引入packageA
+# 1. 将packageB引入packageA
+
 # 在packageB 的package.json中，name字段为 pkgB
 # 在packageA 中：
-# 如果TS报错再运行一次 yarn install 命令
 import pkgB from 'pkgB'
 
-# 将lodash作为packageA的依赖进行安装
+# 2. 将lodash作为packageA的依赖进行安装
 yarn workspace packageA add lodash
 
-# 给所有的package安装lodash依赖 (dependencies peerDependencies 需要安装到每个package中)
+# 3. 给所有的package安装lodash依赖 (dependencies peerDependencies 需要安装到每个package中)
 yarn workspaces add lodash
 
-# 给所有的package安装typescript依赖 (全局devDependencies可以安装到root中)
+# 4. 给所有的package安装typescript依赖 (全局devDependencies可以安装到root中)
 yarn add -W -D typescript
+```
 
-# 2. 移除指令
+2. 移除指令
+
+```sh
 yarn workspace packageA remove packageB
 yarn workspace packageA remove lodash
 yarn workspaces remove lodash

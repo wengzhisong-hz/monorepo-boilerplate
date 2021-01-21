@@ -1,0 +1,25 @@
+{
+  "exclude": ["node_modules", "**/*.test.ts", "dist"],
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "paths": {
+      "@monorepo/*": ["./*/lib"]
+    },
+    "target": "ESNEXT",
+    "module": "commonjs",
+    "lib": ["ESNEXT", "DOM"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "types": [],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

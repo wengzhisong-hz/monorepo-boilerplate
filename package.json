@@ -12,7 +12,7 @@
   "contributors": [],
   "scripts": {
     "clean": "rimraf ./packages/*/dist",
-    "build": "tsc --build",
+    "build": "sh ./build.sh",
     "lint": "eslint . -f codeframe",
     "pretest": "yarn build && yarn lint",
     "test": "yarn jest",
@@ -34,31 +34,13 @@
     "pretty-quick": "^3.1.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.2",
     "verdaccio": "^4.10.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && yarn lint && yarn jest"
-    }
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{js,jsx,ts,tsx}",
-      "!**/node_modules/**"
-    ],
-    "testMatch": [
-      "**/?(*.)(spec|test).ts?(x)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json",
-      "ts",
-      "tsx"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      "pre-commit": "yarn build && yarn lint"
     }
   }
 }
