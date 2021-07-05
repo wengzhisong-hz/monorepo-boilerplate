@@ -1,13 +1,9 @@
 {
-  "exclude": ["node_modules", "**/*.test.ts", "dist"],
   "compilerOptions": {
-    "baseUrl": "./packages",
-    "paths": {
-      "@monorepo/*": ["./*/lib"]
-    },
-    "target": "ESNEXT",
+    "target": "es2019",
     "module": "commonjs",
-    "lib": ["ESNEXT", "DOM"],
+    "lib": ["es2019", "dom"],
+    "jsx": "react",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
@@ -17,6 +13,8 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "importsNotUsedAsValues": "error",
     "moduleResolution": "node",
     "types": [],
     "esModuleInterop": true,

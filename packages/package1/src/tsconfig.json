@@ -1,0 +1,8 @@
+{
+  "extends": "../../../compiler.json",
+  "compilerOptions": {
+    "outDir": "../dist",
+    "types": ["node"]
+  },
+  "references": [{ "path": "../../package2/src" }]
+}

@@ -1,6 +1,6 @@
 # monorepo boilerplate
 
-lerna + yarn + TS 
+lerna + yarn + TS
 
 ## 使用方法
 
@@ -8,14 +8,10 @@ lerna + yarn + TS
 
 使用 yarn: `yarn install` 安装依赖。
 
-### 创建子项目
-// todo 整合 lerna create 指令生成package 
-1. 直接拷贝 `demo` package，并在其基础上进行修改  
-2. 在 `tsconfig.json` 中添加TS references
-
 ### 依赖管理
 
 1. 添加依赖指令
+
 ```sh
 # 1. 将packageB引入packageA
 
@@ -44,7 +40,6 @@ yarn remove -W -D typescript
 
 ### 包管理
 
-
 #### 本地开发调试
 
 1. 设置私库用户：
@@ -57,7 +52,7 @@ npm adduser --registry http://localhost:9000 # 添加用户，输入上面的用
 
 2. 发包
 
-确定lerna.json 的 registry 值为 `http://localhost:9000`  
+确定 lerna.json 的 registry 值为 `http://localhost:9000`
 
 ```sh
 yarn start # 先打包 & 启动本地npm私库
@@ -66,7 +61,7 @@ lerna publish # 发包到本地私库
 
 #### 发布到生产环境
 
-将 `lerna.json` 的 `registry` 值修改为目标npm库，比如npm官方库 `https://registry.npmjs.org/` ，然后执行：
+将 `lerna.json` 的 `registry` 值修改为目标 npm 库，比如 npm 官方库 `https://registry.npmjs.org/` ，然后执行：
 
 ```sh
 lerna publish

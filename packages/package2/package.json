@@ -1,0 +1,12 @@
+{
+  "name": "@package/package2",
+  "version": "1.0.0",
+  "description": "another",
+  "author": {
+    "email": "1322457349@qq.com",
+    "name": "wengzhisong",
+    "url": "https://github.com/wengzhisong-hz"
+  },
+  "license": "MIT",
+  "main": "dist/index.js"
+}

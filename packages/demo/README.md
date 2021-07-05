@@ -1,3 +1,0 @@
-# `demo`
-
-> TODO: description

@@ -1,8 +1,10 @@
 {
   "files": [],
   "references": [
-    { "path": "./packages/demo/lib"},
-    { "path": "./packages/another-demo/lib"}
-  ],
-  "exclude": ["node_modules", "**/*.test.ts", "dist"]
+    { "path": "./packages/package1/src" },
+    { "path": "./packages/package1/test" },
+
+    { "path": "./packages/package2/src" },
+    { "path": "./packages/package2/test" }
+  ]
 }

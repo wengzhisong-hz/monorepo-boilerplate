@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/demo",
+  "name": "@package/package1",
   "version": "1.0.1",
   "description": "demo",
   "author": {
@@ -7,10 +7,9 @@
     "name": "wengzhisong",
     "url": "https://github.com/wengzhisong-hz"
   },
-  "homepage": "",
   "license": "MIT",
-  "main": "dist/demo.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/demo.js"
+    "start": "node dist/index.js"
   }
 }

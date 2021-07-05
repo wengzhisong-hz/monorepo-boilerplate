@@ -1,0 +1,7 @@
+{
+  "extends": "../../../compiler.json",
+  "compilerOptions": {
+    "outDir": "../dist",
+    "types": ["node"]
+  }
+}
